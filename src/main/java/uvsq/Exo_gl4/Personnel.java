@@ -2,7 +2,7 @@ package uvsq.Exo_gl4;
 
 import java.util.ArrayList;
 
-public final class Personnel {
+public class Personnel {
 	private final String  nom;
 	private final String prenom;
 	private final java.time.LocalDate dateNaissance;
@@ -30,6 +30,12 @@ public final class Personnel {
 		public Personnel build() {
 			return new Personnel(this);
 		}
+	}
 	
-}
+	private Personnel( Builder builder) {
+		nom = builder.nom;
+		prenom = builder.prenom;
+		dateNaissance = builder.dateNaissance;
+		numTelephone = builder.numTelephone;
+	}
 }
