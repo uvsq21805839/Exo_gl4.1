@@ -22,6 +22,14 @@ public final class Personnel {
 			numTelephone = new ArrayList<Integer>();
 		}
 		
+		public Builder numeroTelephone(final  ArrayList<Integer> numTelephone) {
+			this.numTelephone = numTelephone;
+			return this;
+		}
 		
-	}
+		public Personnel build() {
+			return new Personnel(this);
+		}
+	
+}
 }
