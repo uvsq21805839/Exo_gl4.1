@@ -23,21 +23,25 @@ public final class Personnel implements Annu{
 	public String getNumTelephone() {
         return  numTelephone;
     }
-	  
+
+	private final String  fonction;
+	public String getFonction() {
+		return fonction;
+	}
 
 	public static class Builder {
 		private final String  nom;
 		private final String prenom;
 		private final java.time.LocalDate dateNaissance;
 		private String numTelephone;
+		private final String fonction;
 		
-		
-		public Builder(final String nom, final String prenom, final java.time.LocalDate dateNaissance,final String numTelephone) {
+		public Builder(final String nom, final String prenom, final java.time.LocalDate dateNaissance,final String numTelephone,final String fonction) {
 			this.nom = nom;
 			this.prenom = prenom; 
 			this.dateNaissance = dateNaissance;
 			this.numTelephone = numTelephone;
-		
+		    this.fonction = fonction;
 	
 		}
 		
@@ -51,12 +55,12 @@ public final class Personnel implements Annu{
 		prenom = builder.prenom;
 		dateNaissance = builder.dateNaissance;
 		numTelephone = builder.numTelephone;
-		
-	 
+		fonction = builder.fonction;
+
 	}
 	public void print() {
 		
-		System.out.print(prenom + " " + nom	+" , naissance : " + dateNaissance + ", Numero de Telephone : " +  numTelephone );
+		System.out.print(prenom + " " + nom	+" , naissance : " + dateNaissance + ", Numero de Telephone : " +  numTelephone + ", fonction : " +  fonction );
 	
 		
 		
